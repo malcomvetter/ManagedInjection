@@ -13,7 +13,7 @@ namespace ManagedInjection
             {
                 var bytes = File.ReadAllBytes(assembly);
                 var b64 = Convert.ToBase64String(bytes);
-                new Injector.Injector().Inject(b64);
+                ManagedInjection.Inject(b64);
             }
             Console.ReadKey();
         }

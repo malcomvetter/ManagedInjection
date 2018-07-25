@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Reflection;
 
-namespace Injector
+namespace ManagedInjection
 {
-    public class Injector
+    public static class ManagedInjection
     {
-        public Injector() { }
-
-        public void Inject(string assemblyB64)
+        public static void Inject(string assemblyB64)
         {
             var bytes = Convert.FromBase64String(assemblyB64);
             var assembly = Assembly.Load(bytes);
